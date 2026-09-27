@@ -72,3 +72,51 @@ section h2 { text-align: center; margin: 28px 0 20px; }
 .spot figcaption { padding: 12px 16px 16px; }
 .spot h3 { margin: 0 0 6px; color: #2f3e46; }
 .spot p { margin: 0; color: #5f6b6f; font-size: .95rem; }
+
+/* ==== 特色区块：Flex 横排 ==== */
+.feature-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.feature-item {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #e6e3dc;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.feature-item p { margin: 0; color: #4a5559; }
+.badge {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  background: #52796f;
+}
+
+.about-text { max-width: 46em; margin: 0 auto; text-align: center; }
+
+/* ==== 响应式断点（移动优先，min-width 逐步增强） ====
+   375 手机默认单列；≥768 平板两列、特色横排；≥992 桌面三列 */
+@media (min-width: 768px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .feature-list { flex-direction: row; }
+  .hero { min-height: 46vh; }
+}
+
+@media (min-width: 992px) {
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .hero h1 { font-size: 2.6rem; }
+}
