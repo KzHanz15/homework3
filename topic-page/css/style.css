@@ -50,3 +50,25 @@ section h2 { text-align: center; margin: 28px 0 20px; }
   color: #6b7a80;
   background: #edf2f0;
 }
+
+/* ==== Grid 卡片墙（移动优先：默认单列） ==== */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.spot {
+  margin: 0;
+  background: #fff;
+  border: 1px solid #e6e3dc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+
+.spot img { width: 100%; }
+
+.spot figcaption { padding: 12px 16px 16px; }
+.spot h3 { margin: 0 0 6px; color: #2f3e46; }
+.spot p { margin: 0; color: #5f6b6f; font-size: .95rem; }
